@@ -1,6 +1,5 @@
-
 --========================================================--
--- NHỌ LẬT HUB NOT CALI 🤪 (v4.5: REAL WALL HOP FLICK & LADDER FLICK)
+-- NHỌ LẬT HUB NOT CALI 🤪 (v4.5 FIX FULL: REAL WALL HOP & LADDER FLICK)
 --========================================================--
 
 local Players = game:GetService("Players")
@@ -46,13 +45,13 @@ local Config = {
     ESPMobs = false,
 
     AutoWallHop = false,
-    WallHopCameraFlick = true, -- Tự động lắc/flick camera màn hình giống real
+    WallHopCameraFlick = true,
     WallHopColorFilter = false,
     TargetWallColor = Color3.fromRGB(255, 255, 255),
     WallColorTolerance = 0.18,
 
-    AutoLadderFlick = false,   -- Ladder Flick Pro
-    LadderFlickPower = 55,     -- Lực bật nảy khi flick thang
+    AutoLadderFlick = false,
+    LadderFlickPower = 55,
 
     SelectedTargetPlayer = nil,
     AutoFollowPlayer = false
@@ -594,4 +593,8 @@ local function RefreshPlayerList()
                 end)
             end
         end
-        PlrScro
+        PlrScroll.CanvasSize = UDim2.new(0, 0, 0, PlrListLayout.AbsoluteContentSize.Y + 5)
+    end)
+end
+
+Players.Play
